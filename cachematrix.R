@@ -1,7 +1,8 @@
 ## functions are geting inverse of an matrix. Inverse is looked up in cache .
-## If there is not, it is calculated and cached.
+## if inverse is not in a cache, it is calculated and cached.
 
-## This function make list of 
+## This function for matrix x makes a list:set-sets a matrix, get-gets a matrix, setinv-sets inverse of a matrix,
+##getinv- gets inverse of an matrix
 
 makeCacheMatrix <- function(x = matrix()) {
 	inv<-NULL
@@ -16,7 +17,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## If inverse of a matrix has  been  calculated, it is called from a cach. If it hasn't been calculated , then we use
+##function solve() to find inverse and then cached it by setinv element of list.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
